@@ -1,55 +1,112 @@
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <%- include('partials/header'); -%>
 
+<form class="search" action="" method="post">
+  <h1>Search Recipes</h1>
+  <input type="search" id="form1" class="form-control" />
+</form>
 
-<h1>Home</h1>
-
-<p> <%= startingContent %> </p>
-<img src= <%= imageURL %> />
-
-<div class="container">
-  <div class="row card-deck">
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-image-top" src="https://thumbs.dreamstime.com/b/channa-masala-indian-dish-prepared-chickpeas-47871577.jpg">
-        <div class="card-body">
-          <h3 class="card-title"><a href="google.com">Channa Masala</a></h3>
+<!-- carousel section -->
+<section>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="images/img2.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>My Caption Title (1st Image)</h5>
+          <p>The whole caption will only show up if the screen is at least medium size.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/img3.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>My Caption Title (1st Image)</h5>
+          <p>The whole caption will only show up if the screen is at least medium size.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/img4.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>My Caption Title (1st Image)</h5>
+          <p>The whole caption will only show up if the screen is at least medium size.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-image-top" src="https://media.istockphoto.com/photos/palak-paneer-or-spinach-and-cottage-cheese-curry-on-a-dark-background-picture-id1146291429?s=612x612">
-        <div class="card-body">
-          <h3 class="card-title"><a href="google.com">Palak paneer</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-image-top" src="https://media.istockphoto.com/photos/dum-aloo-indian-food-picture-id1256914416">
-        <div class="card-body">
-          <h3 class="card-title"><a href="google.com">Aloo dum</a></h3>
-        </div>
-      </div>
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-</div>
+</section>
+
+
+<!-- featured recipes -->
+<section class="featured-recipes">
+
+    <div class="row">
+      <div class="pricing-column col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3><a href="palakPaneer">Aloo Dum</a></h3>
+          </div>
+          <div class="card-body">
+            <img src="https://media.istockphoto.com/photos/dum-aloo-indian-food-picture-id1256914416" height=290px width=300px alt="">
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3><a href="palakPaneer">Palak paneer</a></h3>
+          </div>
+          <div class="card-body">
+            <img src="https://media.istockphoto.com/photos/dum-aloo-indian-food-picture-id1256914416" height=290px width=300px alt="">
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-sm-12 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3><a href="palakPaneer">Channa masala</a></h3>
+          </div>
+          <div class="card-body">
+            <img src="https://media.istockphoto.com/photos/dum-aloo-indian-food-picture-id1256914416" height=290px width=300px alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+
 
 
 
 
 <% posts.forEach(function(postArr) { %>
-  <h1><%=postArr.title%></h1>
-  <p>
-    <%=postArr.content%>
-    <a href="posts/<%=postArr._id%>">Read more</a>
-  </p>
+<h1><%=postArr.title%></h1>
+<p>
+  <%=postArr.content%>
+  <a href="posts/<%=postArr._id%>">Read more</a>
+</p>
 <% });%>
 
 
